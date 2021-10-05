@@ -21,6 +21,11 @@ public class BookOrderAPI {
         this.bookOrderService = bookOrderService;
     }
 
+    @GetMapping("/test")
+    public String testBookOrderAPI(){
+        return "Hello";
+    }
+
     @GetMapping
     public List<BookOrderEntity> getAllOrders() {
         return bookOrderService.getAllBookOrders();
