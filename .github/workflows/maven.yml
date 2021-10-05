@@ -34,4 +34,4 @@ jobs:
 
 
     - name: move jar to app folder
-      run: cp /target/book_store.jar /home/ec2-user/app/book_store.jar
+      run: cp /home/ec2-user/actions-runner/_work/book-store/book-store/target/book_store.jar /home/ec2-user/app/book_store.jar
