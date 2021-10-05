@@ -28,5 +28,10 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
         cache: maven
+
     - name: Build with Maven
       run: mvn -B package -DskipTests
+
+
+    - name: move jar to app folder
+      run: cp /target/book_store.jar /home/ec2-user/app/book_store.jar
