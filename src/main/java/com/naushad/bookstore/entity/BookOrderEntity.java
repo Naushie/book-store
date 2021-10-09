@@ -4,7 +4,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -13,9 +15,8 @@ import javax.persistence.*;
 @Table(name = "book_order")
 public class BookOrderEntity extends BaseEntity{
 
-    @JoinColumn(name = "book_isbn", referencedColumnName = "isbn", nullable = false)
-    @ManyToOne
-    private BookEntity book;
+    @Column(name = "isbn", nullable = false)
+    private String isbn;
 
     private String quantity;
 
