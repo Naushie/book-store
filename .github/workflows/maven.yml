@@ -34,6 +34,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package -DskipTests
 
-
     - name: move jar to app folder
       run: cp /home/ec2-user/actions-runner/_work/book-store/book-store/target/book_store.jar /home/ec2-user/app/book_store.jar
+
+    - name: run new artifact
+      run: sh /home/ec2-user/app/run.sh
